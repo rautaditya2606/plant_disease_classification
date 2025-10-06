@@ -2,6 +2,17 @@
 
 This project demonstrates how to use a pretrained GoogleNet model for image classification. The workflow includes data preprocessing, model customization, training, and evaluation. The implementation is done in PyTorch, and the dataset is structured for training and validation.
 
+## Dataset Images
+
+Below are some sample images from the dataset located at `/home/adityaraut/Documents/Machine-Learning-FCC/dl_fcc/bean_leaf`:
+
+![angular_leaf_spot_train.0.jpg](bean_leaf/angular_leaf_spot_train.0.jpg)
+![angular_leaf_spot_train.106.jpg](bean_leaf/angular_leaf_spot_train.106.jpg)
+![bean_rust_train.108.jpg](bean_leaf/bean_rust_train.108.jpg)
+![healthy_train.0 (1).jpg](bean_leaf/healthy_train.0%20(1).jpg)
+![healthy_train.104 (1).jpg](bean_leaf/healthy_train.104%20(1).jpg)
+
+
 ## Workflow Overview
 
 ### 1. Import Required Libraries
@@ -47,42 +58,3 @@ The notebook begins by importing essential libraries such as PyTorch, torchvisio
 - Pretrained GoogleNet model from PyTorch's `torchvision.models`.
 - Dataset structure inspired by common practices in image classification tasks.
 
-## Dataset Visualization
-
-To visualize the images in the dataset located at `/home/adityaraut/Documents/Machine-Learning-FCC/dl_fcc/bean_leaf`, you can use the following Python code snippet:
-
-```python
-import os
-import matplotlib.pyplot as plt
-from PIL import Image
-
-# Path to the dataset
-dataset_path = "/home/adityaraut/Documents/Machine-Learning-FCC/dl_fcc/bean_leaf"
-
-# Display a few sample images
-sample_images = os.listdir(dataset_path)[:5]  # Adjust the number of images to display
-
-plt.figure(figsize=(10, 10))
-for i, image_name in enumerate(sample_images):
-    image_path = os.path.join(dataset_path, image_name)
-    image = Image.open(image_path)
-    
-    plt.subplot(1, len(sample_images), i + 1)
-    plt.imshow(image)
-    plt.axis('off')
-    plt.title(image_name)
-
-plt.show()
-```
-
-This code will display a few sample images from the dataset for quick visualization. Ensure that the dataset path is correct and contains image files.
-
-## Dataset Images
-
-Below are some sample images from the dataset located at `/home/adityaraut/Documents/Machine-Learning-FCC/dl_fcc/bean_leaf`:
-
-![angular_leaf_spot_train.0.jpg](bean_leaf/angular_leaf_spot_train.0.jpg)
-![angular_leaf_spot_train.106.jpg](bean_leaf/angular_leaf_spot_train.106.jpg)
-![bean_rust_train.108.jpg](bean_leaf/bean_rust_train.108.jpg)
-![healthy_train.0 (1).jpg](bean_leaf/healthy_train.0%20(1).jpg)
-![healthy_train.104 (1).jpg](bean_leaf/healthy_train.104%20(1).jpg)
